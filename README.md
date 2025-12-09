@@ -2,6 +2,8 @@
 
 ## Manual Técnico
 1. Descripción del Proyecto
+
+
 ¿Qué hace el sistema?
 
 Este es un sistema híbrido completo con Backend en C++ e Interfaz Gráfica en Python diseñado para la generación automatizada de horarios universitarios. Utiliza algoritmos de backtracking optimizados con heurísticas y teoría de grafos para asignar materias, grupos y profesores respetando restricciones complejas.
