@@ -1,5 +1,6 @@
-Sistema de Gestión de Horarios Académicos
-Manual Técnico
+# Sistema de Gestión de Horarios Académicos
+
+## Manual Técnico
 1. Descripción del Proyecto
 ¿Qué hace el sistema?
 
