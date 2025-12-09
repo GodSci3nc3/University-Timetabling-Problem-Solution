@@ -231,7 +231,7 @@ Análisis de Grafos
 Ejecuta un análisis profundo de los conflictos y genera imágenes del grafo.
 Bash
 
-# Prueba completa con visualizaciones
+## Prueba completa con visualizaciones
 python test_grafo.py
 
 Salida esperada: Genera imágenes .png del grafo de conflictos y reportes de densidad.
@@ -242,13 +242,16 @@ from src.data.lector_excel import leer_excel
 from src.core.grafo_conflictos import GrafoConflictos
 from src.visualization.visualizador_grafo import visualizar_grafo
 
-# 1. Cargar
+### 1. Cargar
 grupos, materias, profesores = leer_excel("datos_universidad.xlsx")
-# 2. Procesar
+
+### 2. Procesar
 grafo = GrafoConflictos()
 grafo.construir_desde_datos(grupos, materias, profesores)
-# 3. Visualizar
+
+### 3. Visualizar
 visualizar_grafo(grafo, "Grafo de Conflictos", "mi_grafo.png")
+
 
 ## 9. Manejo de Errores
 
