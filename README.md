@@ -9,10 +9,12 @@
 ### ¿Qué hace el sistema?
 
 Este es un sistema híbrido completo con Backend en C++ e Interfaz Gráfica en Python diseñado para la generación automatizada de horarios universitarios. Utiliza algoritmos de backtracking optimizados con heurísticas y teoría de grafos para asignar materias, grupos y profesores respetando restricciones complejas.
-¿A quién va dirigido?
+
+### ¿A quién va dirigido?
 
 Está dirigido a coordinadores académicos y personal administrativo de la Universidad Politécnica de Victoria (o instituciones similares) encargados de la planificación semestral de cargas académicas.
-Problema que resuelve (UTP)
+
+### Problema que resuelve (UTP)
 
 Resuelve el University Timetabling Problem (Problema de Horarios Universitarios), automatizando la asignación de recursos (tiempo, profesores, grupos) para evitar:
 
@@ -22,7 +24,8 @@ Resuelve el University Timetabling Problem (Problema de Horarios Universitarios)
 
     Sobrecarga de horas docentes.
 
-2. Funcionalidades Principales
+## 2. Funcionalidades Principales
+
 
     Importación de Datos: Carga masiva de información académica desde archivos Excel (.xlsx).
 
@@ -34,7 +37,9 @@ Resuelve el University Timetabling Problem (Problema de Horarios Universitarios)
 
     Exportación: Capacidad de guardar los resultados en formatos legibles y estructurados (JSON/Archivos).
 
-3. Requerimientos del Sistema
+    
+
+## 3. Requerimientos del Sistema
 
 Para el correcto funcionamiento y compilación del proyecto se requiere:
 
@@ -52,22 +57,24 @@ Para el correcto funcionamiento y compilación del proyecto se requiere:
 
         Python: Tkinter (GUI), pandas (Datos), openpyxl (Excel), networkx (Grafos), matplotlib (Visualización).
 
-4. Instalación
+## 4. Instalación
 
 Sigue estos pasos para configurar el entorno de desarrollo:
-Paso 1: Clonar el repositorio
+
+### Paso 1: Clonar el repositorio
 Bash
 
 git clone <url-del-repositorio>
 cd <nombre-del-carpeta>
 
-Paso 2: Instalar dependencias de Python
+### Paso 2: Instalar dependencias de Python
 Bash
 
 pip install pandas openpyxl networkx matplotlib
 
 Nota: Tkinter generalmente viene preinstalado con Python.
-Paso 3: Compilar el Backend (C++)
+
+### Paso 3: Compilar el Backend (C++)
 
 El sistema incluye un script de compilación automática.
 Bash
@@ -75,7 +82,7 @@ Bash
 chmod +x compilar.sh
 ./compilar.sh
 
-Paso 4: Cómo ejecutar el sistema
+### Paso 4: Cómo ejecutar el sistema
 
 Tienes dos modos de operación:
 
@@ -99,28 +106,43 @@ Bash
 
 ./build/horarios_backend input.json output.json
 
-5. Estructura del Archivo Excel
+## 5. Estructura del Archivo Excel
 
 El sistema espera un archivo Excel (.xlsx) con exactamente 3 hojas con los siguientes nombres y columnas obligatorias:
-Hoja "Grupos"
+ ### Hoja "Grupos"
 
-Define los grupos de alumnos que requieren horario.
-Cuatrimestre	Turno	Grupo
-5	Matutino	ITI 5-1
-5	Vespertino	ITI 5-2
-Hoja "Materias"
+| Cuatrimestre | Turno      | Grupo    |
 
-Define la carga académica por cuatrimestre.
-Cuatrimestre	Materia	Horas_Semana
-5	Estructura de Datos	6
-5	Diseño de Bases de Datos	5
-Hoja "Profesores"
+|--------------|------------|----------|
 
-Define la planta docente y su disponibilidad.
-Nombre	Materias_Imparte	Horas_Disponibles	Turno_Preferido
-Dr. Said Polanco	Estructura de Datos;Algoritmos	20	Matutino
-Dra. Karla Vázquez	Diseño de Bases de Datos;POO	18	Ambos
-Reglas Importantes
+| 5            | Matutino   | ITI 5-1  |
+
+| 5            | Vespertino | ITI 5-2  |
+
+
+### Hoja "Materias"
+
+| Cuatrimestre | Materia                | Horas_Semana |
+
+|--------------|------------------------|--------------|
+
+| 5            | Estructura de Datos    | 6            |
+
+| 5            | Diseño de Bases de Datos | 5          |
+
+
+### Hoja "Profesores"
+
+| Nombre           | Materias_Imparte                    | Horas_Disponibles | Turno_Preferido |
+
+|------------------|-------------------------------------|-------------------|-----------------|
+
+| Dr. Said Polanco | Estructura de Datos;Algoritmos      | 20                | Matutino        |
+
+| Dra. Karla Vázquez | Diseño de Bases de Datos;POO      | 18                | Ambos           |
+
+
+**Nota**: 
 
     Separadores: Las materias que imparte un profesor se separan con punto y coma (;).
 
@@ -128,7 +150,7 @@ Reglas Importantes
 
     Turnos: Valores aceptados: "Matutino", "Vespertino", "Ambos".
 
-6. Arquitectura del Proyecto
+## 6. Arquitectura del Proyecto
 
 El sistema sigue una arquitectura cliente-servidor local, donde Python actúa como cliente y C++ como motor de procesamiento.
 Estructura de Carpetas y Archivos Clave
@@ -157,7 +179,8 @@ Estructura de Carpetas y Archivos Clave
 
     compilar.sh: Script de automatización de build con CMake.
 
-7. Explicación del Algoritmo
+## 7. Explicación del Algoritmo
+
 Resumen del Problema
 
 El sistema modela el problema como un Problema de Coloreo de Grafos combinado con Satisfacción de Restricciones (CSP).
@@ -197,7 +220,7 @@ Flujo del Algoritmo
 
         Poda el árbol de búsqueda cuando se detecta una invalidez.
 
-8. Uso del Sistema (Scripts de Ayuda)
+## 8. Uso del Sistema (Scripts de Ayuda)
 
 Además de la interfaz principal, el proyecto incluye scripts de utilidad para desarrollo y pruebas:
 Crear datos de prueba
@@ -238,10 +261,11 @@ grafo.construir_desde_datos(grupos, materias, profesores)
 # 3. Visualizar
 visualizar_grafo(grafo, "Grafo de Conflictos", "mi_grafo.png")
 
-9. Manejo de Errores
+## 9. Manejo de Errores
 
 El sistema implementa validaciones robustas para asegurar la integridad de los datos.
 Errores Comunes de Excel (Módulo de Datos)
+
 
 El sistema te alertará si encuentra:
 
@@ -259,7 +283,7 @@ Errores de Ejecución
 
     Error de visualización: Si test_grafo.py falla, asegúrate de tener instalado matplotlib (pip install matplotlib).
 
-📊 Teoría de Grafos Aplicada (Detalle Técnico)
+## Teoría de Grafos Aplicada (Detalle Técnico)
 Resultados del Análisis
 
 Con los datos de ejemplo estándar incluidos en el proyecto:
@@ -274,7 +298,7 @@ Con los datos de ejemplo estándar incluidos en el proyecto:
 
     Número cromático: 9 slots necesarios (Mínimo teórico de bloques de horario).
 
-🎓 Proyecto Académico
+## Proyecto Académico
 
 Este es un proyecto de la materia Estructura de Datos que demuestra:
 
@@ -286,6 +310,6 @@ Este es un proyecto de la materia Estructura de Datos que demuestra:
 
     Ingeniería de Software aplicada a un problema real.
 
-👨‍💻 Autor
+## Autor
 
 Desarrollado para la Universidad Politécnica de Victoria.
