@@ -1,0 +1,7 @@
+/home/arthur/Escritorio/PoliWorks/Practicas/project/build/CMakeFiles/horarios_backend.dir
+/home/arthur/Escritorio/PoliWorks/Practicas/project/build/CMakeFiles/edit_cache.dir
+/home/arthur/Escritorio/PoliWorks/Practicas/project/build/CMakeFiles/rebuild_cache.dir
+/home/arthur/Escritorio/PoliWorks/Practicas/project/build/CMakeFiles/list_install_components.dir
+/home/arthur/Escritorio/PoliWorks/Practicas/project/build/CMakeFiles/install.dir
+/home/arthur/Escritorio/PoliWorks/Practicas/project/build/CMakeFiles/install/local.dir
+/home/arthur/Escritorio/PoliWorks/Practicas/project/build/CMakeFiles/install/strip.dir

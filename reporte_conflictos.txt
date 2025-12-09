@@ -1,0 +1,33 @@
+================================================================================
+REPORTE DE CONFLICTOS DEL GRAFO
+================================================================================
+
+ESTADÍSTICAS GENERALES
+--------------------------------------------------------------------------------
+Nodos totales: 24
+Aristas totales: 80
+Grado promedio: 6.67
+Grado máximo: 8
+Grado mínimo: 5
+Densidad del grafo: 0.2899
+
+DISTRIBUCIÓN POR CUATRIMESTRE
+--------------------------------------------------------------------------------
+Cuatrimestre 1: 8 asignaciones
+Cuatrimestre 3: 8 asignaciones
+Cuatrimestre 5: 8 asignaciones
+
+TOP 10 ASIGNACIONES MÁS CONFLICTIVAS
+--------------------------------------------------------------------------------
+1. (ITI 3-2, Desarrollo Sustentable) - 8 conflictos
+2. (ITI 1-1, Matemáticas Discretas) - 8 conflictos
+3. (ITI 3-2, Matemáticas para TI) - 8 conflictos
+4. (ITI 5-1, Probabilidad y Estadística) - 8 conflictos
+5. (ITI 1-2, Matemáticas Discretas) - 8 conflictos
+6. (ITI 5-2, Probabilidad y Estadística) - 8 conflictos
+7. (ITI 3-1, Desarrollo Sustentable) - 8 conflictos
+8. (ITI 3-1, Matemáticas para TI) - 8 conflictos
+9. (ITI 3-1, Programación Orientada a Objetos) - 7 conflictos
+10. (ITI 3-2, Programación Orientada a Objetos) - 7 conflictos
+
+================================================================================
