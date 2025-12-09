@@ -112,35 +112,24 @@ El sistema espera un archivo Excel (.xlsx) con exactamente 3 hojas con los sigui
  ### Hoja "Grupos"
 
 | Cuatrimestre | Turno      | Grupo    |
-
 |--------------|------------|----------|
-
 | 5            | Matutino   | ITI 5-1  |
-
 | 5            | Vespertino | ITI 5-2  |
-
 
 ### Hoja "Materias"
 
 | Cuatrimestre | Materia                | Horas_Semana |
-
 |--------------|------------------------|--------------|
-
 | 5            | Estructura de Datos    | 6            |
-
 | 5            | Diseño de Bases de Datos | 5          |
 
 
 ### Hoja "Profesores"
 
 | Nombre           | Materias_Imparte                    | Horas_Disponibles | Turno_Preferido |
-
 |------------------|-------------------------------------|-------------------|-----------------|
-
 | Dr. Said Polanco | Estructura de Datos;Algoritmos      | 20                | Matutino        |
-
 | Dra. Karla Vázquez | Diseño de Bases de Datos;POO      | 18                | Ambos           |
-
 
 **Nota**: 
 
